@@ -1,4 +1,4 @@
-```markdown
+
 # 🧾 Invoice Generator Desktop App (Tkinter + MySQL + PDF)
 
 This is a desktop application built using **Tkinter** for GUI, **MySQL** for database storage, and **pdfkit** with **Jinja2** to generate styled invoice PDFs.
