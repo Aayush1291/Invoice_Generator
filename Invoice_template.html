@@ -1,0 +1,42 @@
+<div class="invoice-header">
+<h1>SuperMart Ltd.</h1>
+<p>Viviana Mall , Thane, Maharashtra, 400601</p>
+<p>Phone: (123) 456-7890 | Email: viviana@ltdcompany.com</p>
+</div>
+<div class="invoice-info">
+<p><strong>Invoice No:</strong> {{ INVOICE_NUMBER }}</p>
+<p><strong>Invoice Date:</strong> {{ INVOICE_DATE }}</p>
+</div>
+<div class="customer-info">
+<h2>Billed To:</h2>
+<p>Name: {{ CUSTOMER_NAME }}</p>
+<p>Phone No.: +91{{ CUSTOMER_PHONE }}</p>
+</div>
+<p>{% for item in Invoice_list %}{% endfor %}</p>
+<table style="width: 975px; height: 72px;">
+<thead>
+<tr style="height: 18px;">
+<th style="width: 79.4219px; height: 18px; text-align: center;">QTY</th>
+<th style="width: 422.094px; height: 18px; text-align: center;">Description</th>
+<th style="width: 223.406px; height: 18px; text-align: center;">Unit Price</th>
+<th style="width: 222.078px; text-align: center;">Line Total</th>
+</tr>
+</thead>
+<tbody>
+    {% for item in invoice_list %}
+    <tr style="height: 18px;">
+        <td style="width: 79.4219px; text-align: center; height: 18px;">{{ item[0] }}</td>
+        <td style="width: 422.094px; height: 18px; text-align: center;">{{ item[1] }}</td>
+        <td style="width: 223.406px; text-align: center; height: 18px;">{{ item[2] }}rs.</td>
+        <td style="width: 222.078px; text-align: center;">{{ item[3] }}rs.</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+<div class="total">
+<p>Subtotal: {{ SUBTOTAL }}rs.</p>
+<p class="gst">GST ({{ GST_RATE }}%): {{ GST_AMOUNT }}rs.</p>
+<p>Total: {{ TOTAL_AMOUNT }}rs.</p>
+</div>
+<p>Thank you for your business, visit again !!</p>
+<p>Have a good day !!&nbsp;</p>
