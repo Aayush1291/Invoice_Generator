@@ -52,6 +52,7 @@ def create_tables():
 
 invoice_num = random.randint(1, 999999)
 current_date = date.today().strftime("%d/%m/%Y")
+print("Hello")
 
 def clear_item():
     qty_entry.delete(0, tkinter.END)
